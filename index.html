@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Visuals | Профессиональная оптимизация</title>
+    <style>
+        :root { --accent: #8a2be2; --bg: #050505; --card: rgba(255, 255, 255, 0.05); }
+        body { margin: 0; background-color: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; }
+        
+        header { height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at center, #2e1a47 0%, #050505 70%); text-align: center; }
+        h1 { font-size: 4rem; margin: 0; text-shadow: 0 0 20px var(--accent); }
+        .cta-button { padding: 20px 40px; background: var(--accent); border: none; border-radius: 30px; color: white; font-size: 1.2rem; cursor: pointer; transition: 0.3s; }
+        
+        .section-title { text-align: center; font-size: 2.5rem; margin: 60px 0; color: var(--accent); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 50px; }
+        .glass { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        
+        .about-section, .trust-section { padding: 50px; text-align: center; max-width: 800px; margin: auto; }
+        .trust-grid { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IMPACT VISUALS</h1>
+        <p>Технологическое решение для стабилизации FPS и настройки графики.</p>
+        <button class="cta-button" onclick="alert('Alpha 0.1 скоро будет доступна!')">Скачать ALPHA 0.1</button>
+    </header>
+
+    <section class="about-section">
+        <h2 class="section-title">О нас</h2>
+        <p>Impact Visuals — это независимый проект, созданный для игроков, которые ценят производительность и визуальное качество. Мы разрабатываем инструменты, позволяющие раскрыть потенциал вашего железа в Minecraft, минимизируя задержки и улучшая общую стабильность системы.</p>
+    </section>
+
+    <h2 class="section-title">Наши преимущества</h2>
+    <div class="grid">
+        <div class="glass">
+            <h3>Глубокая оптимизация</h3>
+            <p>Уникальные алгоритмы обработки графических ресурсов для повышения частоты кадров.</p>
+        </div>
+        <div class="glass">
+            <h3>Визуальный стиль</h3>
+            <p>Настройка освещения и эффектов для комфортной и приятной игры.</p>
+        </div>
+        <div class="glass">
+            <h3>Интуитивный интерфейс</h3>
+            <p>Весь функционал в одном окне с понятными настройками для каждого пользователя.</p>
+        </div>
+    </div>
+
+    <section class="trust-section">
+        <h2 class="section-title">Нам доверяют</h2>
+        <div class="trust-grid">
+            <div class="glass">
+                <h3>Ravix</h3>
+                <p>YouTube-сообщество</p>
+            </div>
+            <div class="glass">
+                <h3>Fundash</h3>
+                <p>Minecraft Server</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #666;">
+        <p>Impact Visuals © 2026. Лицензионное ПО для оптимизации графики.</p>
+        <a href="https://t.me/ImpactVisualss" style="color:var(--accent);">Наш Telegram-канал</a>
+    </footer>
+
+</body>
+</html>
