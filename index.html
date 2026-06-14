@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact Visuals | Профессиональная оптимизация</title>
+    <title>Impact Visuals | Professional Minecraft Launcher</title>
     <style>
         :root { --accent: #8a2be2; --bg: #050505; --card: rgba(255, 255, 255, 0.05); }
         body { margin: 0; background-color: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Language Switcher */
+        .lang-switch { position: fixed; top: 20px; right: 20px; cursor: pointer; color: var(--accent); font-weight: bold; }
         
         header { height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at center, #2e1a47 0%, #050505 70%); text-align: center; }
         h1 { font-size: 4rem; margin: 0; text-shadow: 0 0 20px var(--accent); }
@@ -18,55 +21,64 @@
         
         .about-section, .trust-section { padding: 50px; text-align: center; max-width: 800px; margin: auto; }
         .trust-grid { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
+        
+        .lang-en { display: none; }
     </style>
 </head>
 <body>
 
+    <div class="lang-switch" onclick="toggleLang()">RU / EN</div>
+
     <header>
-        <h1>IMPACT VISUALS</h1>
-        <p>Технологическое решение для стабилизации FPS и настройки графики.</p>
-        <button class="cta-button" onclick="alert('Alpha 0.1 скоро будет доступна!')">Скачать ALPHA 0.1</button>
+        <h1>IMPACT VISUALS LAUNCHER</h1>
+        <p class="lang-ru">Современный лаунчер для стабилизации FPS и настройки графики.</p>
+        <p class="lang-en">Modern launcher for FPS stabilization and graphic optimization.</p>
+        <button class="cta-button" onclick="alert('Alpha 0.1 скоро будет доступна!')">Скачать / Download ALPHA 0.1</button>
     </header>
 
     <section class="about-section">
-        <h2 class="section-title">О нас</h2>
-        <p>Impact Visuals — это независимый проект, созданный для игроков, которые ценят производительность и визуальное качество. Мы разрабатываем инструменты, позволяющие раскрыть потенциал вашего железа в Minecraft, минимизируя задержки и улучшая общую стабильность системы.</p>
+        <h2 class="section-title lang-ru">О нас</h2>
+        <h2 class="section-title lang-en">About Us</h2>
+        <p class="lang-ru">Impact Visuals Launcher — это мощный инструмент для игроков, которые ценят производительность. Мы оптимизируем Minecraft, раскрывая потенциал вашего железа.</p>
+        <p class="lang-en">Impact Visuals Launcher is a powerful tool for players who value performance. We optimize Minecraft, unlocking your hardware's full potential.</p>
     </section>
 
-    <h2 class="section-title">Наши преимущества</h2>
+    <h2 class="section-title lang-ru">Наши преимущества</h2>
+    <h2 class="section-title lang-en">Our Advantages</h2>
     <div class="grid">
         <div class="glass">
-            <h3>Глубокая оптимизация</h3>
-            <p>Уникальные алгоритмы обработки графических ресурсов для повышения частоты кадров.</p>
+            <h3 class="lang-ru">Глубокая оптимизация</h3><h3 class="lang-en">Deep Optimization</h3>
+            <p class="lang-ru">Алгоритмы для повышения частоты кадров.</p><p class="lang-en">Algorithms for increasing frame rates.</p>
         </div>
         <div class="glass">
-            <h3>Визуальный стиль</h3>
-            <p>Настройка освещения и эффектов для комфортной и приятной игры.</p>
+            <h3 class="lang-ru">Визуальный стиль</h3><h3 class="lang-en">Visual Style</h3>
+            <p class="lang-ru">Настройка освещения и эффектов.</p><p class="lang-en">Lighting and effects customization.</p>
         </div>
         <div class="glass">
-            <h3>Интуитивный интерфейс</h3>
-            <p>Весь функционал в одном окне с понятными настройками для каждого пользователя.</p>
+            <h3 class="lang-ru">Интуитивный интерфейс</h3><h3 class="lang-en">Intuitive UI</h3>
+            <p class="lang-ru">Удобный лаунчер для каждого игрока.</p><p class="lang-en">User-friendly launcher for everyone.</p>
         </div>
     </div>
 
     <section class="trust-section">
-        <h2 class="section-title">Нам доверяют</h2>
+        <h2 class="section-title lang-ru">Нам доверяют</h2>
+        <h2 class="section-title lang-en">Trusted By</h2>
         <div class="trust-grid">
-            <div class="glass">
-                <h3>Ravix</h3>
-                <p>YouTube-сообщество</p>
-            </div>
-            <div class="glass">
-                <h3>Fundash</h3>
-                <p>Minecraft Server</p>
+            <div class="glass"><h3>Ravix</h3><p>YouTube Community</p></div>
+            <div class="glass"><h3>Fundash</h3><p>Minecraft Server</p>
             </div>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 40px; color: #666;">
-        <p>Impact Visuals © 2026. Лицензионное ПО для оптимизации графики.</p>
-        <a href="https://t.me/ImpactVisualss" style="color:var(--accent);">Наш Telegram-канал</a>
+        <p>Impact Visuals Launcher © 2026.</p>
+        <a href="https://t.me/ImpactVisualss" style="color:var(--accent);">Telegram-канал / Telegram Channel</a>
     </footer>
 
+    <script>
+        function toggleLang() {
+            document.querySelectorAll('.lang-ru, .lang-en').forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+        }
+    </script>
 </body>
 </html>
